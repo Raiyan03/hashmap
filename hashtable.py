@@ -1,6 +1,6 @@
 class HashTable:  
-    def __init__(self):
-        self.MAX = 500
+    def __init__(self, size=500):
+        self.MAX = size
         self.arr = [[] for i in range(self.MAX)]
         
     def get_hash(self, key):
