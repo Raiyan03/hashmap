@@ -1,13 +1,13 @@
-class HashTable:  
-    def __init__(self):
-        self.MAX = 500
+class HashMap:  
+    def __init__(self, size=500):
+        self.MAX = size
         self.arr = [[] for i in range(self.MAX)]
         
     def get_hash(self, key):
         hash = 0
         for char in key:
-            hash += ord(char)
-        return hash % self.MAX
+            hash = (hash * 31 + ord(char)) % self.MAX
+        return hash
     
     def __getitem__(self, key):
         arr_index = self.get_hash(key)

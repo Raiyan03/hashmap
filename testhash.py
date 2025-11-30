@@ -2,7 +2,7 @@ import random
 import string
 import time
 import statistics
-from hashmap import *   
+from hashmap import *
 
 
 def print_section(title):
